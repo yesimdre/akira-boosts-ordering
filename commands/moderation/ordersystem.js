@@ -28,7 +28,7 @@ module.exports = {
                         let username;
                         let checker;
                         messageReaction.users.forEach((item) => {
-                            if (item.id == 646921306234683413) return;
+                            if (item.id == 646843068238004245) return;
                             username = item.id;
                             let checker = item.username.toLowerCase();
                             ["ticketcreate"].forEach(x => require(`../../handlers/${x}`)(bot, username, checker, room, server));
