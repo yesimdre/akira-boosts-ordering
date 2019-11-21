@@ -9,7 +9,7 @@ module.exports = {
     accessableby: "Admins",
   },
   run: async (bot, message, args) => {
-    if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Sorry, but you do not have permission to do that!");
+    if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.has("644664589551927356")) return message.reply("Sorry, but you do not have permission to do that!");
     if (!message.channel.name.startsWith(`order-`)) return message.channel.send(`You can't add another role to a order channel!`);
     var noAmount = new Discord.RichEmbed()
     .setColor("GREEN")
